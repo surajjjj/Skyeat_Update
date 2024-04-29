@@ -22,9 +22,6 @@ import '../repository/user_repository.dart';
 import '../../generated/l10n.dart';
 import 'h_category.dart';
 import 'recommed_shop.dart';
-
-
-
 class HomeWidget extends StatefulWidget {
   final GlobalKey<ScaffoldState> parentScaffoldKey;
   final Function selectTab;
@@ -124,10 +121,18 @@ class HomeWidgetState extends StateMVC<HomeWidget> {
                 //         ]
                 //     ),
                 //   ),
-                  const SizedBox(height: 50),
-                  _con.categoryList.isEmpty?const CategoryShimmerWidget() :MyRecommendedTypeWidget(categoryList: _con.categoryList,),
-
-
+                //   const SizedBox(height: 50),
+                //
+                //   _con.categoryList.isEmpty?const CategoryShimmerWidget() :MyRecommendedTypeWidget(categoryList: _con.categoryList,),
+                const SizedBox(height:20),
+                Container(
+                    padding: const EdgeInsets.only(left:20,right:20),
+                    child:Text(S.of(context).popular_cuisines,
+                      style: Theme.of(context).textTheme.displayMedium,
+                    )
+                ),
+                const SizedBox(height:5),
+                _con.categoryList.isEmpty?const CategoryShimmerWidget() : MyRecommendedTypeWidget(categoryList: _con.categoryList),
                 // Container(
                 //    padding: const EdgeInsets.only(left:20,right: 10),
                 //    child:Row(

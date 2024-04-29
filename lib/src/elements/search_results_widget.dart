@@ -242,6 +242,7 @@ class SearchResultWidgetState extends StateMVC<SearchResultWidget> with SingleTi
                          )
                      ),
                      const SizedBox(height:5),
+
                      _con.categoryList.isEmpty?const CategoryShimmerWidget() : MyRecommendedTypeWidget(categoryList: _con.categoryList),
                    ],
                  ):Container()

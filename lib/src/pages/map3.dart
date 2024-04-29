@@ -1187,7 +1187,7 @@ class _MapLiveTrackState extends State<MapLiveTrack>  with AfterLayoutMixin<MapL
                                             padding: const EdgeInsets.all(10),
                                             child:  Container(
                                                 margin: const EdgeInsets.only(top:1),
-                                                child:Text('Arriving in ${_info?.totalDuration??''} ',
+                                                child:Text('Arriving On Time',
                                                   style: Theme.of(context).textTheme.titleSmall.merge(TextStyle(color:Theme.of(context).colorScheme.primary)),
                                                 )
                                             )
